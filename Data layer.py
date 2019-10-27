@@ -2,7 +2,8 @@
     data_layer.py
     ~~~~~~~~~~~~~
 
-    Dette modul implementerer...
-
+    Dette modul implementerer
+    funktionerne til bookingsystemet.
 
 """
+
