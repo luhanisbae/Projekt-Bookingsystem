@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="152cb364-1d9a-41d6-9f6b-df083b20a353" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1210848179">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="2011" />
+          <entry key="txt" value="35" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="35" />
+          <entry key="Python" value="2011" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../GYM/2.G/STUDIERETNING/Programmering/Python/tkinter/todo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1920">
+              <caret line="129" column="44" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Presentation layer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-134">
+              <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Data layer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Unit test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Business layer.py" />
+        <option value="$PROJECT_DIR$/Unit test.py" />
+        <option value="$PROJECT_DIR$/Data layer.py" />
+        <option value="$PROJECT_DIR$/../GYM/2.G/STUDIERETNING/Programmering/Python/tkinter/visa_mc.py" />
+        <option value="$PROJECT_DIR$/Presentation layer.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="797" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Bookingsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bookingsystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Presentation layer">
+    <configuration name="Presentation layer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Bookingsystem" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Presentation layer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="todo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Bookingsystem" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../GYM/2.G/STUDIERETNING/Programmering/Python/tkinter" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../GYM/2.G/STUDIERETNING/Programmering/Python/tkinter/todo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="visa_mc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Bookingsystem" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../GYM/2.G/STUDIERETNING/Programmering/Python/tkinter" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../GYM/2.G/STUDIERETNING/Programmering/Python/tkinter/visa_mc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Presentation layer" />
+      <item itemvalue="Python.todo" />
+      <item itemvalue="Python.visa_mc" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Presentation layer" />
+        <item itemvalue="Python.visa_mc" />
+        <item itemvalue="Python.todo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="152cb364-1d9a-41d6-9f6b-df083b20a353" name="Default Changelist" comment="" />
+      <created>1571663124515</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571663124515</updated>
+    </task>
+    <task id="LOCAL-00001" summary="hej thomas og ibra">
+      <created>1572203110780</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572203110780</updated>
+    </task>
+    <task id="LOCAL-00002" summary=".">
+      <created>1572203236710</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572203236710</updated>
+    </task>
+    <task id="LOCAL-00003" summary="-">
+      <created>1572203593694</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572203593694</updated>
+    </task>
+    <task id="LOCAL-00004" summary="hm">
+      <created>1572203659739</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572203659739</updated>
+    </task>
+    <task id="LOCAL-00005" summary=".">
+      <created>1572203702555</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572203702555</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Hjælp">
+      <created>1572205472005</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572205472005</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32771084" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286517" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hej thomas og ibra" />
+    <MESSAGE value="-" />
+    <MESSAGE value="hm" />
+    <MESSAGE value="." />
+    <MESSAGE value="Hjælp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hjælp" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/itcamp_hello.py" />
+    <entry file="file://$PROJECT_DIR$/Business layer.py" />
+    <entry file="file://$PROJECT_DIR$/../GYM/2.G/STUDIERETNING/Programmering/Python/tkinter/visa_mc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GYM/2.G/STUDIERETNING/Programmering/Python/tkinter/todo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="129" column="44" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Presentation layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unit test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
