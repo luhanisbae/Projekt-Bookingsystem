@@ -15,7 +15,7 @@ class BookingSystem:
 
     def __init__(self, root):
         self._root = root
-
+        self._use = UsernameAndPass()
 
 
         # forside frame
@@ -49,14 +49,13 @@ class BookingSystem:
         self._user_frame.pack(side=BOTTOM)
         self._res_frame.pack(side=BOTTOM)
 
-        self._opret_bruger_btn.pack(side=BOTTOM, command=self.create_user)
+        self._opret_bruger_btn.pack(side=BOTTOM, command=self._use.create_user(self._brugernavn_entry, self._kode_entry))
         self._log_ind_bruger_btn.pack(side=BOTTOM)
 
         self._photo_front_label.pack()
 
         self._root.geometry('500x500')
 
-#tomasito
 
 if __name__ == "__main__":
     window = Tk()
