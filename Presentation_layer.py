@@ -55,11 +55,19 @@ class BookingSystem:
         self._opret_btn.pack(side=TOP)
         self._log_ind_btn.pack(side=TOP)
 
+
         # RESERVATIONSFRAME
         self._res_frame = Frame(self._root)
 
         # knap
+        self._opr_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvatica', 20))
+        self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20))
+        self._edit_res_btn = Button(self._res_frame, text='Rediger reservation', font=('Helvetica', 20))
 
+        # pack
+        self._opr_res_btn.pack(side=TOP)
+        self._del_res_btn.pack(side=TOP)
+        self._edit_res_btn.pack(side=TOP)
 
         self._root.geometry('500x500')
 
