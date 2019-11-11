@@ -19,7 +19,9 @@ class User_obj:
         print(self._reservation)
 
     def show_reservation_interval(self, start_time, end_time):
+        reservlist = []
         for i in self._reservation:
             if start_time <= i <= end_time:
-                print(i)
+                reservlist.append(i)
+        return reservlist
 

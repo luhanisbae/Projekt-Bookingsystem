@@ -22,6 +22,13 @@ class MyTestCase(unittest.TestCase):
         a.edit_reservation(1530, 1630)
         self.assertEqual(a._reservation, [1630])
 
+    def test_show_reservation_interval(self):
+        a = User_obj()
+        for i in range(5):
+            a.create_reservation(1500 + i*100)
+        self.assertEqual(a.show_reservation_interval(1600, 1800), [1600, 1700, 1800])
+
+
 
 if __name__ == '__main__':
     unittest.main()
