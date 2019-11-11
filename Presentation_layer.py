@@ -17,6 +17,7 @@ class BookingSystem:
         self._root = root
 
 
+
         # forside frame
         self._main_frame = Frame(self._root)
 
