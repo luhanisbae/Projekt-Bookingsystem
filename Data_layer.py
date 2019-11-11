@@ -16,8 +16,8 @@ class UsernameAndPass:
         self._users = []
 
     def create_user(self, user, password):
-        if user in self._users:
-            pass
+        if user in self._users and self._userspass[user] == password:
+            return True
         else:
             user = User_obj()
             self._users.append(user)
