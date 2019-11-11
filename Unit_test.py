@@ -1,5 +1,6 @@
 import unittest
 from User import User_obj
+from Data_layer import UsernameAndPass
 
 
 class MyTestCase(unittest.TestCase):
