@@ -26,8 +26,8 @@ class BookingSystem:
         self._headline_label = Label(self._main_frame, text='BOOK EN FRISØRTID', font=('Helvetica 35 bold'))
 
         # knapper
-        self._opret_bruger_btn = Button(self._main_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch)
-        self._log_ind_bruger_btn = Button(self._main_frame, text='Log ind', font=('Helvetica', 20), command=self.switch)
+        self._opret_bruger_btn = Button(self._main_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch_main)
+        self._log_ind_bruger_btn = Button(self._main_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_main)
 
         # pack
         self._main_frame.pack(side=TOP)
@@ -55,16 +55,19 @@ class BookingSystem:
         self._opret_btn.pack(side=TOP)
         self._log_ind_btn.pack(side=TOP)
 
-        # reservationsframe
+        # RESERVATIONSFRAME
         self._res_frame = Frame(self._root)
-
 
 
         self._root.geometry('500x500')
 
-    def switch(self):
+    def switch_main(self):
         self._main_frame.forget()
         self._user_frame.pack(side=TOP)
+
+    def switch_user(self):
+        self._user_frame.forget()
+        self._res_frame.pack(side=TOP)
 
 if __name__ == "__main__":
     window = Tk()
