@@ -29,6 +29,11 @@ class MyTestCase(unittest.TestCase):
             a.create_reservation(1500 + i*100)
         self.assertEqual(a.show_reservation_interval(1600, 1800), [1600, 1700, 1800])
 
+    def test_create_user(self):
+        a = UsernameAndPass()
+        a.create_user("gamer", "tyler")
+        self.assertEqual(a._userspass["gamer"], "tyler")
+
 
 
 if __name__ == '__main__':
