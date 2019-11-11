@@ -69,6 +69,8 @@ class BookingSystem:
         self._user_frame.forget()
         self._res_frame.pack(side=TOP)
 
+        self._use.create_user(user=self._brugernavn_entry, password=self._kode_entry)
+
 if __name__ == "__main__":
     window = Tk()
     window.title("Bookingsystem")
