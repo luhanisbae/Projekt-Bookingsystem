@@ -9,7 +9,7 @@
 from User import User_obj
 
 
-class BookingSystem:
+class UsernameAndPass:
 
     def __init__(self):
         self._userspass = {}

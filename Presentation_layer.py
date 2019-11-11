@@ -8,12 +8,14 @@
 """
 
 from tkinter import *
+from Data_layer import *
 
 
 class BookingSystem:
 
     def __init__(self, root):
         self._root = root
+
 
         # forside frame
         self._main_frame = Frame(self._root)
@@ -46,7 +48,7 @@ class BookingSystem:
         self._user_frame.pack(side=BOTTOM)
         self._res_frame.pack(side=BOTTOM)
 
-        self._opret_bruger_btn.pack(side=BOTTOM)
+        self._opret_bruger_btn.pack(side=BOTTOM, command=self.create_user)
         self._log_ind_bruger_btn.pack(side=BOTTOM)
 
         self._photo_front_label.pack()
