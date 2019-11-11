@@ -19,7 +19,7 @@ class UsernameAndPass:
         if user in self._users and self._userspass[user] == password:
             return True
         else:
-            user = User_obj()
+            exec("user = User_obj()")
             self._users.append(user)
             self._userspass[user] = password
 
