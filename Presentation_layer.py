@@ -43,7 +43,7 @@ class BookingSystem:
         self._brugernavn_label = Label(self._user_frame, text='Brugernavn:')
         self._brugernavn_entry = Entry(self._user_frame)
         self._opret_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20),)
-        self._log_ind_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20),)
+        self._log_ind_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20))
         self._kode_label = Label(self._user_frame, text='Adgangskode:')
         self._kode_entry = Entry(self._user_frame)
 
@@ -65,8 +65,6 @@ class BookingSystem:
     def switch(self):
         self._main_frame.forget()
         self._user_frame.pack(side=TOP)
-
-#self._use.create_user(self._brugernavn_entry, self._kode_entry)
 
 if __name__ == "__main__":
     window = Tk()
