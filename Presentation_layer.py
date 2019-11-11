@@ -58,6 +58,8 @@ class BookingSystem:
         # RESERVATIONSFRAME
         self._res_frame = Frame(self._root)
 
+        # knap
+
 
         self._root.geometry('500x500')
 
