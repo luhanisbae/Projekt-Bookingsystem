@@ -17,45 +17,56 @@ class BookingSystem:
         self._root = root
         self._use = UsernameAndPass()
 
-
-        # forside frame
+        # FORSIDEFRAME + ALT TIL FORSIDEN
         self._main_frame = Frame(self._root)
 
-        # opret / login bruger frame
+        self._photo_front = PhotoImage(file='forside.png')
+        self._photo_front_label = Label(self._main_frame, image=self._photo_front)
+
+        self._headline_label = Label(self._main_frame, text='BOOK EN FRISØRTID', font=('Helvetica 35 bold'))
+
+        # knapper
+        self._opret_bruger_btn = Button(self._main_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch)
+        self._log_ind_bruger_btn = Button(self._main_frame, text='Log ind', font=('Helvetica', 20), command=self.switch)
+
+        # pack
+        self._main_frame.pack(side=TOP)
+        self._headline_label.pack(side=TOP)
+        self._opret_bruger_btn.pack(side=BOTTOM)
+        self._log_ind_bruger_btn.pack(side=BOTTOM)
+        self._photo_front_label.pack()
+
+        # BRUGERFRAME + ALT TIL DENNE SIDE
         self._user_frame = Frame(self._root)
+
+        # knap, label med tilhørende entry
+        self._brugernavn_label = Label(self._user_frame, text='Brugernavn:')
+        self._brugernavn_entry = Entry(self._user_frame)
+        self._opret_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20))
+        self._log_ind_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20))
+        self._kode_label = Label(self._user_frame, text='Adgangskode:')
+        self._kode_entry = Entry(self._user_frame)
+
+        # pack
+        self._brugernavn_label.pack(side=TOP)
+        self._brugernavn_entry.pack(side=TOP)
+        self._kode_label.pack(side=TOP)
+        self._kode_entry.pack(side=TOP)
+        self._opret_btn.pack(side=TOP)
+        self._log_ind_btn.pack(side=TOP)
 
         # reservationsframe
         self._res_frame = Frame(self._root)
 
-        # foto på forside
-        self._photo_front = PhotoImage(file='forside.png')
 
-        # overskrift
-        self._headline_label = Label(self._main_frame, text='BOOK EN FRISØRTID', font=('Helvetica 35 bold'))
-
-        # knapper
-        self._opret_bruger_btn = Button(self._main_frame, text='Opret bruger', font=('Helvetica', 20))
-        self._log_ind_bruger_btn = Button(self._main_frame, text='Log ind', font=('Helvetica', 20))
-
-        self._brugernavn_label = Label(self._user_frame, text='Brugernavn:')
-        self._brugernavn_entry = Entry(self._user_frame)
-        self._kode_label = Label(self._user_frame, text='Adgangskode:')
-        self._kode_entry = Entry(self._user_frame)
-        self._photo_front_label = Label(self._main_frame, image=self._photo_front)
-
-        # pack
-        self._headline_label.pack(side=TOP)
-        self._main_frame.pack(side=TOP)
-        self._user_frame.pack(side=BOTTOM)
-        self._res_frame.pack(side=BOTTOM)
-
-        self._opret_bruger_btn.pack(side=BOTTOM, command=self._use.create_user(self._brugernavn_entry, self._kode_entry))
-        self._log_ind_bruger_btn.pack(side=BOTTOM)
-
-        self._photo_front_label.pack()
 
         self._root.geometry('500x500')
 
+    def switch(self):
+        self._main_frame.forget()
+        self._user_frame.pack(side=TOP)
+
+#self._use.create_user(self._brugernavn_entry, self._kode_entry)
 
 if __name__ == "__main__":
     window = Tk()
