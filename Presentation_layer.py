@@ -87,8 +87,9 @@ class BookingSystem:
         self._user_frame.pack(side=TOP)
 
     def switch_user(self):
-        self._user_frame.forget()
-        self._res_frame.pack(side=TOP)
+        if self._use.create_user(user=self._username_entry.get(), password=self._pass_entry.get()) is True:
+            self._user_frame.forget()
+            self._res_frame.pack(side=TOP)
 
     def _create_user(self):
         try:

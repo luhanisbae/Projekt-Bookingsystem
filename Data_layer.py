@@ -16,15 +16,16 @@ class UsernameAndPass:
         self._users = []
         self._id = 0
 
-    def create_user(self, user, password):
+    def login_user(self):
         if user in self._users and self._userspass[user] == password:
             return True
-        else:
-            user_id = "user" + str(self._id)
-            user_id = User_obj()
-            self._id += 1
-            self._users.append(user_id)
-            self._userspass[user] = password
+
+    def create_user(self, user, password):
+        user_id = "user" + str(self._id)
+        user_id = User_obj()
+        self._id += 1
+        self._users.append(user_id)
+        self._userspass[user] = password
 
     def delete_user(self, user):
         self._userspass.pop(user)
