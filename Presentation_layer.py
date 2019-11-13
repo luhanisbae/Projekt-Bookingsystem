@@ -74,6 +74,8 @@ class BookingSystem:
         self._edit_res_btn.pack(side=TOP)
 
 
+
+
         self._root.geometry('500x500')
 
     def switch_main(self):
