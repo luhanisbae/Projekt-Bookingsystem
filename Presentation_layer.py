@@ -62,7 +62,7 @@ class BookingSystem:
 
         # knap, entry
         self._res_entry = Entry(self._res_frame)
-        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self._res.create_reservation(time=self._res_entry.get()))
+        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self.add_to_listbox)
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20))
         self._edit_res_btn = Button(self._res_frame, text='Redigér reservation', font=('Helvetica', 20))
 
@@ -97,6 +97,16 @@ class BookingSystem:
         except ValueError:
             print("Wrong length")
         self._use.create_user(user=self._username_entry.get(), password=self._pass_entry.get())
+
+    def add_to_listbox(self):
+        try:
+            int(self._res_entry.get())
+        except TypeError:
+            print("Wrong")
+        finally:
+            self._res_lb.insert(END, self._res_entry.get())
+            self._res.create_reservation(time=self._res_entry.get())
+
 
 if __name__ == "__main__":
     window = Tk()
