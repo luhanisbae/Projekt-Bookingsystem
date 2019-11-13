@@ -116,9 +116,13 @@ class BookingSystem:
         self._res.delete_reservation(int(self._res_lb.curselection()))
 
     def edit_in_listbox(self):
-        self._res_lb.delete(self._res_lb.curselection())
-        self._res_lb.insert(self._res_lb.curselection(), int(self._res_entry.get()))
-        self._res.edit_reservation(self._res_lb.curselection(), int(self._res_entry.get()))
+        if len(self._res_entry.get()) != 4 or int(self._res_entry.get()) in self._res._reservation:
+            pass
+        else:
+            self._res_lb.insert(self._res_lb.curselection(), int(self._res_entry.get()))
+            self._res_lb.delete(self._res_lb.curselection())
+            self._res.edit_reservation(self._res_lb.curselection(), int(self._res_entry.get()))
+
 
 if __name__ == "__main__":
     window = Tk()
