@@ -16,6 +16,7 @@ class BookingSystem:
     def __init__(self, root):
         self._root = root
         self._use = UsernameAndPass()
+        self._res = User_obj()
 
         # FORSIDEFRAME + ALT TIL FORSIDEN
         self._main_frame = Frame(self._root)
@@ -64,9 +65,10 @@ class BookingSystem:
         self._photo_front_label = Label(self._res_frame, image=self._photo_profile)
 
         # knap
-        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvatica', 20))
+        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self._res.create_reservation)
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20))
-        self._edit_res_btn = Button(self._res_frame, text='Rediger reservation', font=('Helvetica', 20))
+        self._edit_res_btn = Button(self._res_frame, text='Redigér reservation', font=('Helvetica', 20))
+
 
         # listbox
         self._res_lb = Listbox(self._res_frame)
@@ -78,7 +80,9 @@ class BookingSystem:
         self._res_lb.pack()
 
 
+
         self._root.geometry('500x500')
+
 
     def switch_main(self):
         self._main_frame.forget()
