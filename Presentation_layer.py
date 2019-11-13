@@ -61,7 +61,7 @@ class BookingSystem:
         self._pass_entry.pack(side=TOP)
         self._create_user2_btn.pack(side=TOP)
         self._log_in_user2_btn.pack(side=TOP)
-        self._back1_btn.pack(side=TOP)
+        self._back1_btn.pack(side=BOTTOM)
 
 
         # RESERVATIONSFRAME
@@ -75,7 +75,7 @@ class BookingSystem:
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20), command=self.delete_in_listbox)
         self._edit_res_btn = Button(self._res_frame, text='Redigér reservation', font=('Helvetica', 20), command=self.edit_in_listbox)
 
-
+        self._back2_btn = Button(self._res_frame, text='Back', font=('Helvetica', 10), command=self.switch_to_user)
 
 
         # listbox
@@ -83,11 +83,12 @@ class BookingSystem:
 
         # pack
         self._res_headline_label.pack(side=TOP)
-        self._create_res_btn.pack(side=BOTTOM)
-        self._del_res_btn.pack(side=BOTTOM)
-        self._edit_res_btn.pack(side=BOTTOM)
-        self._res_entry.pack(side=BOTTOM)
         self._res_lb.pack()
+        self._res_entry.pack(side=TOP)
+        self._create_res_btn.pack(side=TOP)
+        self._del_res_btn.pack(side=TOP)
+        self._edit_res_btn.pack(side=TOP)
+        self._back2_btn.pack(side=BOTTOM)
 
         self._root.geometry('500x500')
 
@@ -103,7 +104,11 @@ class BookingSystem:
     def switch_from_user(self):
         if self._use.login_user(user=self._username_entry.get(), password=self._pass_entry.get()) is True:
             self._user_frame.forget()
-            self._res_frame.pack(side=TOP)
+            self._res_frame.pack()
+
+    def switch_to_user(self):
+        self._res_frame.forget()
+        self._user_frame.pack()
 
     def _create_user(self):
         try:
