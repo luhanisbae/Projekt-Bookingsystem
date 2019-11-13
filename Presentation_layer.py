@@ -42,7 +42,7 @@ class BookingSystem:
         # knap, label med tilhørende entry
         self._username_label = Label(self._user_frame, text='Brugernavn:')
         self._username_entry = Entry(self._user_frame)
-        self._create_user2_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch_user)
+        self._create_user2_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20), command=self._create_user)
         self._log_in_user2_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_user)
         self._pass_label = Label(self._user_frame, text='Adgangskode:')
         self._pass_entry = Entry(self._user_frame)
@@ -68,10 +68,15 @@ class BookingSystem:
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20))
         self._edit_res_btn = Button(self._res_frame, text='Rediger reservation', font=('Helvetica', 20))
 
+        #listbox
+        self._res_lb = Listbox(self._res_frame)
+
         # pack
         self._create_res_btn.pack(side=TOP)
         self._del_res_btn.pack(side=TOP)
         self._edit_res_btn.pack(side=TOP)
+        self._res_lb.pack()
+
 
 
         self._root.geometry('500x500')
@@ -84,6 +89,7 @@ class BookingSystem:
         self._user_frame.forget()
         self._res_frame.pack(side=TOP)
 
+    def _create_user(self):
         self._use.create_user(user=self._username_entry, password=self._pass_entry)
 
 if __name__ == "__main__":
