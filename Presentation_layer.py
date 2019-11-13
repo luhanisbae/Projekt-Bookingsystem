@@ -40,6 +40,9 @@ class BookingSystem:
         # BRUGERFRAME + ALT TIL DENNE SIDE
         self._user_frame = Frame(self._root)
 
+        #self._photo_user = PhotoImage(file='hairstyle.png')
+        #self._photo_user_label = Label(self._user_frame, image=self._photo_user)
+
         # knap, label med tilhørende entry
         self._username_label = Label(self._user_frame, text='Brugernavn:')
         self._username_entry = Entry(self._user_frame)
@@ -49,6 +52,7 @@ class BookingSystem:
         self._pass_entry = Entry(self._user_frame)
 
         # pack
+        #self._photo_user_label.pack(side=BOTTOM)
         self._username_label.pack(side=TOP)
         self._username_entry.pack(side=TOP)
         self._pass_label.pack(side=TOP)
@@ -60,23 +64,25 @@ class BookingSystem:
         # RESERVATIONSFRAME
         self._res_frame = Frame(self._root)
 
+        self._res_headline_label = Label(self._res_frame, text='DINE RESERVATIONER', font=('Helvetica', 20))
+
         # knap, entry
         self._res_entry = Entry(self._res_frame)
         self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self.add_to_listbox)
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20), command=self.delete_in_listbox)
-        self._edit_res_btn = Button(self._res_frame, text='Redigér reservation', font=('Helvetica', 20))
+        self._edit_res_btn = Button(self._res_frame, text='Redigér reservation', font=('Helvetica', 20), command=self.edit_in_listbox)
 
 
         # listbox
         self._res_lb = Listbox(self._res_frame)
 
         # pack
-        self._create_res_btn.pack(side=TOP)
-        self._del_res_btn.pack(side=TOP)
-        self._edit_res_btn.pack(side=TOP)
+        self._res_headline_label.pack(side=TOP)
+        self._create_res_btn.pack(side=BOTTOM)
+        self._del_res_btn.pack(side=BOTTOM)
+        self._edit_res_btn.pack(side=BOTTOM)
         self._res_entry.pack(side=BOTTOM)
         self._res_lb.pack()
-
 
 
         self._root.geometry('500x500')
@@ -110,6 +116,10 @@ class BookingSystem:
         self._res_lb.delete(self._res_lb.curselection())
         self._res.delete_reservation(int(self._res_lb.curselection()))
 
+    def edit_in_listbox(self):
+        self._res_lb.delete(self._res_lb.curselection())
+        self._res_lb.insert(self._res_lb.curselection(), int(self._res_entry.get()))
+        self._res.edit_reservation(self._res_lb.curselection(), int(self._res_entry.get()))
 
 if __name__ == "__main__":
     window = Tk()
