@@ -60,12 +60,9 @@ class BookingSystem:
         # RESERVATIONSFRAME
         self._res_frame = Frame(self._root)
 
-        # profilbillede
-        self._photo_profile = PhotoImage(file='profilbillede.png')
-        self._photo_front_label = Label(self._res_frame, image=self._photo_profile)
-
-        # knap
-        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self._res.create_reservation)
+        # knap, entry
+        self._res_entry = Entry(self._res_frame)
+        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self._res.create_reservation(time=self._res_entry.get()))
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20))
         self._edit_res_btn = Button(self._res_frame, text='Redigér reservation', font=('Helvetica', 20))
 
@@ -77,6 +74,7 @@ class BookingSystem:
         self._create_res_btn.pack(side=TOP)
         self._del_res_btn.pack(side=TOP)
         self._edit_res_btn.pack(side=TOP)
+        self._res_entry.pack(side=BOTTOM)
         self._res_lb.pack()
 
 
