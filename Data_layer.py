@@ -17,8 +17,6 @@ class UsernameAndPass:
         self._id = 0
 
     def create_user(self, user, password):
-        try:
-            pass
         if user in self._users and self._userspass[user] == password:
             return True
         else:
@@ -34,3 +32,4 @@ class UsernameAndPass:
 
     def edit_user(self, user, new_password):
         self._userspass[user] = new_password
+
