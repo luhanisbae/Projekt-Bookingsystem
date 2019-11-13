@@ -78,9 +78,6 @@ class BookingSystem:
         self._res_lb.pack()
 
 
-
-
-
         self._root.geometry('500x500')
 
     def switch_main(self):
