@@ -26,48 +26,53 @@ class BookingSystem:
         self._headline_label = Label(self._main_frame, text='BOOK EN FRISØRTID', font=('Helvetica 35 bold'))
 
         # knapper
-        self._opret_bruger_btn = Button(self._main_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch_main)
-        self._log_ind_bruger_btn = Button(self._main_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_main)
+        self._create_user1_btn = Button(self._main_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch_main)
+        self._log_in_user1_btn = Button(self._main_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_main)
 
         # pack
         self._main_frame.pack(side=TOP)
         self._headline_label.pack(side=TOP)
-        self._opret_bruger_btn.pack(side=BOTTOM)
-        self._log_ind_bruger_btn.pack(side=BOTTOM)
+        self._create_user1_btn.pack(side=BOTTOM)
+        self._log_in_user1_btn.pack(side=BOTTOM)
         self._photo_front_label.pack()
 
         # BRUGERFRAME + ALT TIL DENNE SIDE
         self._user_frame = Frame(self._root)
 
         # knap, label med tilhørende entry
-        self._brugernavn_label = Label(self._user_frame, text='Brugernavn:')
-        self._brugernavn_entry = Entry(self._user_frame)
-        self._opret_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch_user)
-        self._log_ind_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_user)
-        self._kode_label = Label(self._user_frame, text='Adgangskode:')
-        self._kode_entry = Entry(self._user_frame)
+        self._username_label = Label(self._user_frame, text='Brugernavn:')
+        self._username_entry = Entry(self._user_frame)
+        self._create_user2_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch_user)
+        self._log_in_user2_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_user)
+        self._pass_label = Label(self._user_frame, text='Adgangskode:')
+        self._pass_entry = Entry(self._user_frame)
 
         # pack
-        self._brugernavn_label.pack(side=TOP)
-        self._brugernavn_entry.pack(side=TOP)
-        self._kode_label.pack(side=TOP)
-        self._kode_entry.pack(side=TOP)
-        self._opret_btn.pack(side=TOP)
-        self._log_ind_btn.pack(side=TOP)
+        self._username_label.pack(side=TOP)
+        self._username_entry.pack(side=TOP)
+        self._pass_label.pack(side=TOP)
+        self._pass_entry.pack(side=TOP)
+        self._create_user2_btn.pack(side=TOP)
+        self._log_in_user2_btn.pack(side=TOP)
 
 
         # RESERVATIONSFRAME
         self._res_frame = Frame(self._root)
 
+        # profilbillede
+        self._photo_profile = PhotoImage(file='profilbillede.png')
+        self._photo_front_label = Label(self._res_frame, image=self._photo_profile)
+
         # knap
-        self._opr_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvatica', 20))
+        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvatica', 20))
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20))
         self._edit_res_btn = Button(self._res_frame, text='Rediger reservation', font=('Helvetica', 20))
 
         # pack
-        self._opr_res_btn.pack(side=TOP)
+        self._create_res_btn.pack(side=TOP)
         self._del_res_btn.pack(side=TOP)
         self._edit_res_btn.pack(side=TOP)
+
 
         self._root.geometry('500x500')
 
@@ -79,7 +84,7 @@ class BookingSystem:
         self._user_frame.forget()
         self._res_frame.pack(side=TOP)
 
-        self._use.create_user(user=self._brugernavn_entry, password=self._kode_entry)
+        self._use.create_user(user=self._username_entry, password=self._pass_entry)
 
 if __name__ == "__main__":
     window = Tk()
