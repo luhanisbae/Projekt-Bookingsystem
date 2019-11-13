@@ -93,7 +93,7 @@ class BookingSystem:
 
     def _create_user(self):
         try:
-            if len(self._username_entry.get()) > 0 and len(self._pass_entry.get() > 0):
+            if len(self._username_entry.get()) == 0 or len(self._pass_entry.get()) == 0:
                 raise ValueError
         except ValueError:
             print("Wrong length")
