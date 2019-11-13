@@ -68,7 +68,7 @@ class BookingSystem:
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20))
         self._edit_res_btn = Button(self._res_frame, text='Rediger reservation', font=('Helvetica', 20))
 
-        #listbox
+        # listbox
         self._res_lb = Listbox(self._res_frame)
 
         # pack
