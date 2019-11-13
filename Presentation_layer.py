@@ -62,8 +62,8 @@ class BookingSystem:
 
         # knap, entry
         self._res_entry = Entry(self._res_frame)
-        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self._res.create_reservation(time=self._res_entry.get()))
-        self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20))
+        self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self.add_to_listbox)
+        self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20), command=self.delete_in_listbox)
         self._edit_res_btn = Button(self._res_frame, text='Redigér reservation', font=('Helvetica', 20))
 
 
@@ -98,6 +98,18 @@ class BookingSystem:
         except ValueError:
             print("Wrong length")
         self._use.create_user(user=self._username_entry.get(), password=self._pass_entry.get())
+
+    def add_to_listbox(self):
+        if len(self._res_entry.get()) != 4 or int(self._res_entry.get()) in self._res._reservation:
+            pass
+        else:
+            self._res_lb.insert(END, int(self._res_entry.get()))
+            self._res.create_reservation(int(self._res_entry.get()))
+
+    def delete_in_listbox(self):
+        self._res_lb.delete(self._res_lb.curselection())
+        self._res.delete_reservation(int(self._res_lb.curselection()))
+
 
 if __name__ == "__main__":
     window = Tk()
