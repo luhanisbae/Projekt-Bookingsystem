@@ -93,7 +93,12 @@ class BookingSystem:
         self._res_frame.pack(side=TOP)
 
     def _create_user(self):
-        self._use.create_user(user=self._username_entry, password=self._pass_entry)
+        try:
+            if len(self._username_entry.get()) > 0 and len(self._pass_entry.get() > 0):
+                raise ValueError
+        except ValueError:
+            print("Wrong length")
+        self._use.create_user(user=self._username_entry.get(), password=self._pass_entry.get())
 
 if __name__ == "__main__":
     window = Tk()
