@@ -16,8 +16,8 @@ class UsernameAndPass:
         self._users = []
         self._id = 0
 
-    def login_user(self):
-        if user in self._users and self._userspass[user] == password:
+    def login_user(self, user, password):
+        if self._userspass[user] == password:
             return True
 
     def create_user(self, user, password):

@@ -77,8 +77,6 @@ class BookingSystem:
         self._res_entry.pack(side=BOTTOM)
         self._res_lb.pack()
 
-
-
         self._root.geometry('500x500')
 
 
@@ -87,7 +85,7 @@ class BookingSystem:
         self._user_frame.pack(side=TOP)
 
     def switch_user(self):
-        if self._use.create_user(user=self._username_entry.get(), password=self._pass_entry.get()) is True:
+        if self._use.login_user(user=self._username_entry.get(), password=self._pass_entry.get()) is True:
             self._user_frame.forget()
             self._res_frame.pack(side=TOP)
 
