@@ -77,6 +77,8 @@ class BookingSystem:
 
         self._back2_btn = Button(self._res_frame, text='Back', font=('Helvetica', 10), command=self.switch_to_user)
 
+        self._text1_label = Label(self._res_frame, text='OBS! Tjek, hvad du har indtastet.', font=('Helvetica', 15), fg='red')
+
 
         # listbox
         self._res_lb = Listbox(self._res_frame)
@@ -120,8 +122,9 @@ class BookingSystem:
 
     def add_to_listbox(self):
         if len(self._res_entry.get()) != 4 or int(self._res_entry.get()) in self._res._reservation:
-            pass
+            self._text1_label.pack(side=BOTTOM)
         else:
+            self._text1_label.forget()
             self._res_lb.insert(END, int(self._res_entry.get()))
             self._res.create_reservation(int(self._res_entry.get()))
 
