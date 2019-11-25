@@ -93,6 +93,7 @@ class BookingSystem:
         self._del_res_btn.pack(side=TOP)
         self._edit_res_btn.pack(side=TOP)
         self._back2_btn.pack(side=BOTTOM)
+        self._edit_code_btn.pack(side=BOTTOM)
 
         self._root.geometry('500x500')
 
