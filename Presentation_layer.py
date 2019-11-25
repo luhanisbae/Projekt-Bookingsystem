@@ -18,6 +18,7 @@ class BookingSystem:
         self._use = UsernameAndPass()
         self._res = User_obj()
 
+
         # FORSIDEFRAME + ALT TIL FORSIDEN
         self._main_frame = Frame(self._root)
 
@@ -35,11 +36,9 @@ class BookingSystem:
         self._create_user_log_in_btn.pack(side=BOTTOM)
         self._photo_front_label.pack()
 
+
         # BRUGERFRAME + ALT TIL DENNE SIDE
         self._user_frame = Frame(self._root)
-
-        #self._photo_user = PhotoImage(file='hairstyle.png')
-        #self._photo_user_label = Label(self._user_frame, image=self._photo_user)
 
         # knap, label med tilhørende entry
         self._username_label = Label(self._user_frame, text='Brugernavn:')
@@ -47,7 +46,7 @@ class BookingSystem:
         self._create_user_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20), command=self._create_user)
         self._log_in_user_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_from_user)
         self._pass_label = Label(self._user_frame, text='Adgangskode:')
-        self._pass_entry = Entry(self._user_frame)
+        self._pass_entry = Entry(self._user_frame, show='*')
 
         self._back1_btn = Button(self._user_frame, text='Back', font=('Helvetica', 8), command=self.switch_to_main)
 
@@ -61,7 +60,7 @@ class BookingSystem:
         self._back1_btn.pack(side=BOTTOM)
 
 
-        # RESERVATIONSFRAME
+        # RESERVATIONSFRAME + ALT TIL DENNE SIDE
         self._res_frame = Frame(self._root)
 
         self._res_headline_label = Label(self._res_frame, text='DINE RESERVATIONER', font=('Helvetica', 20))
@@ -158,7 +157,7 @@ class BookingSystem:
         self._show_interval_res_btn.forget()
 
     def show_specific_interval(self):
-        self._res.show_reservation_interval(int(self._starttime_entry.get()), int(self._endtime_entry.get()))
+        print(self._res.show_reservation_interval(int(self._starttime_entry.get()), int(self._endtime_entry.get())))
 
 
 if __name__ == "__main__":
