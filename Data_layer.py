@@ -28,6 +28,8 @@ class UsernameAndPass:
         user = self._str_to_class("User_obj")
         self._users.append(user)
         print(self._users)
+        for i in self._users:
+            print(i)
 
     def delete_user(self, user):
         self._userspass.pop(user)
