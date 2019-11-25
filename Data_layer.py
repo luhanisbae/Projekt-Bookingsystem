@@ -25,11 +25,9 @@ class UsernameAndPass:
 
     def create_user(self, user, password):
         self._userspass[user] = password
-        #user = self._str_to_class("User_obj")
+        user = self._str_to_class("User_obj")
         self._users.append(user)
         print(self._users)
-        #for item in self._users:
-            #print(item._reservations)
 
     def delete_user(self, user):
         self._userspass.pop(user)
