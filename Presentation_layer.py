@@ -66,7 +66,7 @@ class BookingSystem:
 
         self._res_headline_label = Label(self._res_frame, text='DINE RESERVATIONER', font=('Helvetica', 20))
 
-        self._edit_code_btn = Button(self._res_frame, text='Skift adgangskode', font=('Helvetica', 20))
+        self._edit_password_btn = Button(self._res_frame, text='Skift adgangskode', font=('Helvetica', 20), command=self._edit_password)
 
         # knap, entry
         self._res_entry = Entry(self._res_frame)
@@ -85,6 +85,10 @@ class BookingSystem:
 
         self._text1_label = Label(self._res_frame, text='OBS! Tjek, hvad du har indtastet.', font=('Helvetica', 15), fg='red')
 
+        self._new_password_label = Label(self._res_frame, text="Nyt password", font=('Helvetica', 10))
+        self._new_password_entry = Entry(self._res_frame, font=('Helvetica', 10))
+        self._new_password_btn = Button(self._res_frame, text="Skift", font=('Helvetica', 10), command=self._edit_password)
+
 
         # listbox
         self._res_lb = Listbox(self._res_frame)
@@ -97,7 +101,7 @@ class BookingSystem:
         self._del_res_btn.pack()
         self._edit_res_btn.pack()
         self._back2_btn.pack(side=BOTTOM)
-        self._edit_code_btn.pack(side=BOTTOM)
+        self._edit_password_btn.pack(side=BOTTOM)
 
         self._show_interval_res_btn.pack()
 
@@ -128,6 +132,15 @@ class BookingSystem:
         except ValueError:
             print("Wrong length")
         self._use.create_user(user=self._username_entry.get(), password=self._pass_entry.get())
+
+    def _show_edit_password_entries(self):
+        self._new_password_label.pack(side=LEFT)
+        self._new_password_entry.pack(side=LEFT)
+        self._new_password_btn.pack(side=LEFT)
+        self._edit_password_btn.forget()
+
+    def _edit_password(self):
+        pass
 
     def add_to_listbox(self):
         if len(self._res_entry.get()) != 4 or int(self._res_entry.get()) in self._res._reservation:
