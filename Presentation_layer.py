@@ -27,14 +27,12 @@ class BookingSystem:
         self._headline_label = Label(self._main_frame, text='BOOK EN FRISØRTID', font=('Helvetica 35 bold'))
 
         # knapper
-        self._create_user1_btn = Button(self._main_frame, text='Opret bruger', font=('Helvetica', 20), command=self.switch_from_main)
-        self._log_in_user1_btn = Button(self._main_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_from_main)
+        self._create_user_log_in_btn = Button(self._main_frame, text='Videre', font=('Helvetica', 20), command=self.switch_from_main)
 
         # pack
         self._main_frame.pack()
-        self._headline_label.pack(side=TOP)
-        self._create_user1_btn.pack(side=BOTTOM)
-        self._log_in_user1_btn.pack(side=BOTTOM)
+        self._headline_label.pack()
+        self._create_user_log_in_btn.pack(side=BOTTOM)
         self._photo_front_label.pack()
 
         # BRUGERFRAME + ALT TIL DENNE SIDE
@@ -46,21 +44,20 @@ class BookingSystem:
         # knap, label med tilhørende entry
         self._username_label = Label(self._user_frame, text='Brugernavn:')
         self._username_entry = Entry(self._user_frame)
-        self._create_user2_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20), command=self._create_user)
-        self._log_in_user2_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_from_user)
+        self._create_user_btn = Button(self._user_frame, text='Opret bruger', font=('Helvetica', 20), command=self._create_user)
+        self._log_in_user_btn = Button(self._user_frame, text='Log ind', font=('Helvetica', 20), command=self.switch_from_user)
         self._pass_label = Label(self._user_frame, text='Adgangskode:')
         self._pass_entry = Entry(self._user_frame)
 
-        self._back1_btn = Button(self._user_frame, text='Back', font=('Helvetica', 10), command=self.switch_to_main)
+        self._back1_btn = Button(self._user_frame, text='Back', font=('Helvetica', 8), command=self.switch_to_main)
 
         # pack
-        #self._photo_user_label.pack(side=BOTTOM)
-        self._username_label.pack(side=TOP)
-        self._username_entry.pack(side=TOP)
-        self._pass_label.pack(side=TOP)
-        self._pass_entry.pack(side=TOP)
-        self._create_user2_btn.pack(side=TOP)
-        self._log_in_user2_btn.pack(side=TOP)
+        self._username_label.pack()
+        self._username_entry.pack()
+        self._pass_label.pack()
+        self._pass_entry.pack()
+        self._create_user_btn.pack()
+        self._log_in_user_btn.pack()
         self._back1_btn.pack(side=BOTTOM)
 
 
@@ -75,7 +72,14 @@ class BookingSystem:
         self._del_res_btn = Button(self._res_frame, text='Slet reservation', font=('Helvetica', 20), command=self.delete_in_listbox)
         self._edit_res_btn = Button(self._res_frame, text='Redigér reservation', font=('Helvetica', 20), command=self.edit_in_listbox)
 
-        self._back2_btn = Button(self._res_frame, text='Back', font=('Helvetica', 10), command=self.switch_to_user)
+        self._show_interval_res_btn = Button(self._res_frame, text='Vis reservationer i bestemt interval', font=('Helvetica', 12), command=self.show_interval_entries)
+        self._starttime_label = Label(self._res_frame, text='Start tid: ', font=('Helvetica', 10))
+        self._starttime_entry = Entry(self._res_frame, font=('Helvetica', 10))
+        self._endtime_label = Label(self._res_frame, text='Slut tid: ', font=('Helvetica', 10))
+        self._endtime_entry = Entry(self._res_frame, font=('Helvetica', 10))
+        self._show_res_btn = Button(self._res_frame, text='Vis', font=('Helvetica', 10), command=self.show_specific_interval)
+
+        self._back2_btn = Button(self._res_frame, text='Back', font=('Helvetica', 8), command=self.switch_to_user)
 
         self._text1_label = Label(self._res_frame, text='OBS! Tjek, hvad du har indtastet.', font=('Helvetica', 15), fg='red')
 
@@ -84,13 +88,15 @@ class BookingSystem:
         self._res_lb = Listbox(self._res_frame)
 
         # pack
-        self._res_headline_label.pack(side=TOP)
+        self._res_headline_label.pack()
         self._res_lb.pack()
-        self._res_entry.pack(side=TOP)
-        self._create_res_btn.pack(side=TOP)
-        self._del_res_btn.pack(side=TOP)
-        self._edit_res_btn.pack(side=TOP)
+        self._res_entry.pack()
+        self._create_res_btn.pack()
+        self._del_res_btn.pack()
+        self._edit_res_btn.pack()
         self._back2_btn.pack(side=BOTTOM)
+
+        self._show_interval_res_btn.pack()
 
         self._root.geometry('500x500')
 
@@ -139,6 +145,17 @@ class BookingSystem:
             self._res_lb.insert(self._res_lb.curselection(), int(self._res_entry.get()))
             self._res_lb.delete(self._res_lb.curselection())
             self._res.edit_reservation(self._res_lb.curselection(), int(self._res_entry.get()))
+
+    def show_interval_entries(self):
+        self._starttime_label.pack(side=LEFT)
+        self._starttime_entry.pack(side=LEFT)
+        self._endtime_label.pack(side=LEFT)
+        self._endtime_entry.pack(side=LEFT)
+        self._show_res_btn.pack(side=LEFT)
+        self._show_interval_res_btn.forget()
+
+    def show_specific_interval(self):
+        self._res.show_reservation_interval(int(self._starttime_entry.get()), int(self._endtime_entry.get()))
 
 
 if __name__ == "__main__":
