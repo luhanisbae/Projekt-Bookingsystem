@@ -69,6 +69,8 @@ class BookingSystem:
 
         self._res_headline_label = Label(self._res_frame, text='DINE RESERVATIONER', font=('Helvetica', 20))
 
+        self._edit_code_btn = Button(self._res_frame, text='Skift adgangskode', font=('Helvetica', 20))
+
         # knap, entry
         self._res_entry = Entry(self._res_frame)
         self._create_res_btn = Button(self._res_frame, text='Opret reservation', font=('Helvetica', 20), command=self.add_to_listbox)
