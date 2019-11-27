@@ -5,8 +5,8 @@ class User_obj:
     def __init__(self):
         self._reservation = []
 
-    def __str__(self):
-        return "self._reservation"
+    def __repr__(self):
+        return str(self._reservation)
 
     def create_reservation(self, time):
         self._reservation.append(time)

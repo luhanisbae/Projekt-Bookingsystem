@@ -8,7 +8,8 @@
 """
 
 from tkinter import *
-from Data_layer import *
+from Data_layer import UsernameAndPass
+from User import User_obj
 
 
 class BookingSystem:
