@@ -149,7 +149,6 @@ class BookingSystem:
             self._text1_label.forget()
             self._res_lb.insert(END, int(self._res_entry.get()))
             self._res.create_reservation(int(self._res_entry.get()))
-            print(self._res._reservation)
 
     def delete_in_listbox(self):
         self._res_lb.delete(self._res_lb.curselection())
