@@ -12,7 +12,6 @@ class UsernameAndPass:
     def __init__(self):
         self._userspass = {}
         self._users = []
-        self._id = 0
 
     def login_user(self, user, password):
         if self._userspass[user] == password:
