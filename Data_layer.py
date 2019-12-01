@@ -21,8 +21,3 @@ class UsernameAndPass:
         if not user in self._users:
             self._userspass[user] = password
             self._users.append(user)
-
-    def delete_user(self, user):
-        self._userspass.pop(user)
-        self._users.remove(user)
-
